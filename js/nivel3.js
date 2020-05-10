@@ -123,10 +123,11 @@
 // TAREA: Ahora te toca a vos! — Obtené la etiqueta h1 de la página y guardala en una variable
 //       variable llamada nuestroTitulo.
 //       Utilizá console.log para ver lo que obtuviste!
-
-
-
-
+/*
+let $nuestroTitulo = document.querySelector("h1");
+console.log ($nuestroTitulo);
+console.log ($nuestroTitulo.innerText);
+*/
 
 
 /*
@@ -146,25 +147,29 @@
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
 
-
-
-
+/*
+let mediaLinks = document.querySelectorAll("li");
+console.log (mediaLinks);
+*/
 
 
 // TAREA: Ahora utilizá console.log para ver la cantidad de 
 // elementos li que hay con mediaLinks.length
 
 
-
+// console.log(mediaLinks.length);
 
 
 
 // TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
-
-
-
+/*
+for (let i=0; i<mediaLinks.length; i++){
+    mediaLinks[i].innerText = "Hola" + i;
+    console.log (mediaLinks[i].innerText);
+}
+*/
 
 
 /*

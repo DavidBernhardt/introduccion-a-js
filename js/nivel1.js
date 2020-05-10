@@ -55,7 +55,6 @@
 // Consejo: El atajo del teclado para guardar cambios a un archivo es 'CMD + S' en Mac y 'CTRL + S' en
 //      Windows.
 
-
 /*
     Variables
     =========
@@ -101,6 +100,8 @@
 */
 
 // TAREA: Creá 2 variables indefinidas, llamadas numeroUno y numeroDos.
+//let numeroUno;
+//let numeroDos;
 
 
 /*
@@ -114,8 +115,11 @@
 
 // Crear 2 variables nuevas, una con tu nombre, la segunda con tu edad. Dales un nombre apropriado y
 // mostralas con un alert.
-
-
+/*
+let nombre = 'David';
+let edad = '20';
+alert('Me llamo '+nombre+' y tengo '+edad+' años')
+*/
 // Consejo: para mostrar 2 variables de texto al mismo tiempo, las podés unir usando el signo '+'. Ejemplo:
 
 /*
@@ -149,10 +153,10 @@
 */
 
 // TAREA: Crear una constante y mostrarla con un alert
-
+// const IVA = 21;
+// alert(IVA);
 
 // TAREA: Intentar asignar un valor a una constante y ver qué pasa (mirar la consola)
-
 
 // Consejo: No te olvides de comentar (//) los alerts y los errores intencionales (como en la tarea anterior) para
 // que los alerts no aparezcan cada vez, y para que los errores no hagan que el programa se detenga.
@@ -182,8 +186,12 @@
 // * 3ra variable llamada resultadoMultiplicacion que va a ser igual a
 // la 1ra variable multiplicada (con el operador *) por la 2nda variable.
 // Mostrar el valor de resultadoMultiplicacion con un alert o un console.log
-
-
+/*
+let diez = 10;
+let tres = 3;
+resultadoMultiplicacion = diez * tres;
+alert(resultadoMultiplicacion);
+*/
 /*
     Funciones
     =========
@@ -211,7 +219,7 @@
 
     Por ejemplo:
 
-    console.log(nombreFuncion(10));
+    console.log(nombreFuncion(10));mm
 
     Esto hace que el resultado de nombreFuncion(10), en este caso, 20 (10 * 2) se pase a console.log.
     Es decir que sería equivalente a hacer console.log(20)
@@ -239,17 +247,38 @@
 // Escribí código para que devuelva (return) la suma de numero1 y numero2
 // Ejecutá la función sumar y mostrá su resultado en la consola
 
+function sumar(numero1,numero2){
+    return numero1+numero2;
+}
 
 // TAREA: Ahora creemos otra función llamada 'restar'
 //       Que acepte 2 números como parámetro y los reste, y que devuelva ese valor.
 // Ejecutá la función con los números 5 y 1 y mostralos con console.log
 
+function restar(numero1,numero2){
+    return numero1-numero2
+}
 
 // Consejo: Sabías que en vez de pasar los números directamente a tu función podés crear variables con esos números
 // y pasarlos como parámetros? Probalo!
 
 // Consejo: Dejá las funciones como están, no las comentes, las vamos a usar de nuevo.
+// EJERCICIO: Crear una funcion que tome como parametro el año actual y el año de nacimiento y calcule
+// la edad del usuario (mas o menos).
+// Preguntarle estos datos al usuario y guardarlos en dos variables
+// Ejecutar la funcion con estos datos
+/*
+function saludar(nombre){
+    return 'Hola '+ nombre;
+}
+let miNombre=prompt('¿Cual es tu nombre?','Ingrese su nombre');
+let anioActual=prompt('¿Cuál es el año actual?');
+let anioNacimiento=prompt('¿En que año naciste?');
 
+alert(
+    saludar(miNombre)+', tu edad aproximada es de '+restar(anioActual,anioNacimiento)+' años.'
+)
+*/
 /*
     Condicionales If-Else
     ==================
@@ -328,8 +357,15 @@
 //
 
 // TAREA: Cambiar el operador a '-', y fijarse que llame a la función 'restar' en vez de a la de 'sumar'.
-
-
+/*
+let operador = '-', numero1 = 12, numero2 = 5;
+if (operador == '+'){
+    console.log(sumar(numero1, numero2));
+}
+else{
+    console.log(restar(numero1, numero2));
+}
+*/
 /*
     'If' - 'Else if' - 'Else'
     ===================
@@ -360,7 +396,13 @@
 
 // TAREA: Creemos 2 funciones más: dividir y multiplicar.
 
+function dividir(numero1, numero2){
+    return numero1 / numero2;
+}
 
+function multiplicar (numero1, numero2){
+    return numero1 * numero2;
+}
 
 
 
@@ -370,7 +412,24 @@
 //       'else if' el 'operador' es igual a '*' - llamar a la función 'multiplicar'.
 //       else console.log - "Perdón, no conozco ese operador".
 
+numero1 = prompt('Ingrese el primer nùmero')
+numero2 = prompt('Ingrese el segundo nùmero')
+operador = prompt('Ingrese el operador', '+, - , *, /')
 
+let resultado;
+if (operador === '+'){
+    resultado = sumar(numero1, numero2);
+}else if (operador === '-'){
+    resultado = restar(numero1, numero2);
+}else if (operador === '*'){
+    resultado = multiplicar(numero1, numero2);
+}else if (operador === '/'){
+    resultado = dividir(numero1, numero2);
+}else{
+    console.log(`El operador ${operador} no es valido`)
+}
+
+console.log(`El resultado de ${numero1} ${operador} ${numero2} es ${resultado}`)
 
 
 

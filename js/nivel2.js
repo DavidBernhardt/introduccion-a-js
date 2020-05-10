@@ -42,9 +42,7 @@
 // TAREA: Crea tu propio array, llamado comidasFavoritas, y escribi dentro algunas
 //       cosas que te gustan.
 
-
-
-
+let comidasFavoritas = ["Milanesas", "Asado", "Pollo", "Lomito","Tacos"];
 
 
 
@@ -64,7 +62,7 @@
 // TAREA: Verifique cuántos valores tiene en su array comidasFavoritas.
 // imprimi utilizando console.log el resultado.
 
-
+console.log(`El array tiene ${comidasFavoritas.length} elemento/s`)
 
 
 
@@ -90,7 +88,8 @@
 
 // TAREA: Obtené el tercer elemento de tu array comidasFavoritas e imprimilo utilizando console.log.
 
-
+let tercerElemento = comidasFavoritas[2];
+console.log(`El tercer elemento del Array es ${tercerElemento}`);
 
 
 
@@ -115,14 +114,13 @@
 // TAREA: Toma tu array de comidasFavoritas y reemplaza el primer valor
 // con cualquier otra cosa.
 
-
-
-
+//console.log(comidasFavoritas); //Antes de modificar el array
+//comidasFavoritas[0] = "Choripan";
 
 
 // TAREA: console.log todo el array para verificar.
 
-
+//console.log(comidasFavoritas); //Luego de modificar el array
 
 
 
@@ -146,14 +144,14 @@
 
 // TAREA: Extendamos tu lista de comidasFavoritas y agreguemos un valor más.
 
-
+//comidasFavoritas.push("Sopa paraguaya");
 
 
 
 
 // TAREA: console.log todo el array para verificar.
 
-
+//console.log(comidasFavoritas); //Array luego de agregar el elemento "Sopa Paraguaya"
 
 
 
@@ -181,19 +179,28 @@
 
 // TAREA: Intenta crear un array como una constante y modifica los valores que contiene.
 
-
-
-
-
+/*
+const marcasDeAutos = ["Ford", "Peugeot", "Chevrolet", "Dodge"];
+console.log(marcasDeAutos);
+marcasDeAutos[0] = "Chrysler";
+console.log(marcasDeAutos);
+*/
 
 
 // TAREA: Observa lo que sucede si agregas algo con.push(), cambias algo
 //       con notación de corchetes (array[1]) y
 //       asigna un nuevo array completamente nuevo a la constante
 
+/*
+marcasDeAutos.push("Lancia"); //Se puede
+console.log(marcasDeAutos);
 
+marcasDeAutos[0] = "Ford"; //Se puede
+console.log(marcasDeAutos);
 
-
+otrasMarcas = ["Fiat", "Citroen", "Toyota"]; // No se puede
+marcasDeAutos = otrasMarcas;
+*/ 
 
 
 /*
@@ -246,8 +253,13 @@
 // TAREA: Usando un bucle 'while', decile a tu computadora que registre los números de
 //       diez a uno.
 
-
-
+/*
+let numero = 10;
+while(numero > 0){
+    console.log(numero);
+    numero--;
+}
+*/
 
 
 
@@ -268,7 +280,10 @@
 
 // TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
 
-
+let i = 3;
+for (i=3; i<=22; i+=3){
+    console.log(i);
+}
 
 
 
